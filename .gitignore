@@ -4,11 +4,11 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files
-/src/twitch_bot/database.sqlite
-/src/twitch_bot/database.sqlite-journal
+/src/aimbot/database.sqlite
+/src/aimbot/database.sqlite-journal
 .env
 .idea/*
-/src/twitch_bot/configs/*
+/src/aimbot/configs/*
 *.rsuser
 *.suo
 *.user
