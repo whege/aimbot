@@ -4,11 +4,11 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files
-/src/aimbot/database.sqlite
-/src/aimbot/database.sqlite-journal
+/src/bot/database.sqlite
+/src/bot/database.sqlite-journal
 .env
 .idea/*
-/src/aimbot/configs/*
+/src/bot/configs/*
 *.rsuser
 *.suo
 *.user
