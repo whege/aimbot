@@ -60,8 +60,9 @@ async def cmd_poll(msg: Message):
 
 @Command("so", permission=ADMIN_PERMISSION)
 async def cmd_shoutout(msg: Message, *args):
+    uname = str(args[0]).replace("@", "")
     await msg.reply(
-        f"Be a good boy and go follow {args[0]} for mommy. They're such a nice kid. https://twitch.tv/{args[0]}"
+        f"Be a good boy and go follow {args[0]} for mommy. They're such a nice kid. https://twitch.tv/{uname}"
     )
 
 
