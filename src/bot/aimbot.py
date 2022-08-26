@@ -29,7 +29,7 @@ class MommyTron(BaseBot):
         :return: None
         """
         await channel.send_message(f"OMFG {raider} JUST RAIDED WITH {viewer_count} viewers!!! LFG")
-        await channel.send_message(f"!so {raider}")
+        await channel.send_message(f"!so @{raider}")
 
     def __call__(self, *args, **kwargs):
         self.run()
