@@ -1,5 +1,6 @@
 __all__ = [
-    "get_commands"
+    "get_commands",
+    "shoutout"
 ]
 __author__ = """whege"""
 __date__ = "8/2/2022"
@@ -22,3 +23,13 @@ def get_commands() -> List[Command]:
     command_funcs = [f for _, f in getmembers(caller) if isinstance(f, Command)]
     assert len(command_funcs) > 0
     return command_funcs
+
+
+def shoutout(account: str) -> str:
+    """
+    Creates a shoutout message for the passed user
+    :param account:
+    :return:
+    """
+    return f"Be a good boy and go follow {account} for mommy. " \
+           f"They're such a nice kid. https://twitch.tv/{str(account).replace('@', '')}"
