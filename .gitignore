@@ -354,3 +354,5 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 /data/raw/
+/src/configs/
+/notebooks/.ipynb_checkpoints/
