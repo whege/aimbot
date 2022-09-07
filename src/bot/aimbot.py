@@ -5,6 +5,8 @@ __doc__ = """Enter some text here, bitch"""
 
 from twitchbot import BaseBot, Channel, Message
 
+from common.utilfuncs import shoutout
+
 
 class MommyTron(BaseBot):
     async def on_bits_donated(self, msg: Message, bits: int):
@@ -29,7 +31,7 @@ class MommyTron(BaseBot):
         :return: None
         """
         await channel.send_message(f"OMFG {raider} JUST RAIDED WITH {viewer_count} viewers!!! LFG")
-        await channel.send_message(f"!so @{raider}")
+        await channel.send_message(shoutout(raider))
 
     def __call__(self, *args, **kwargs):
         self.run()
