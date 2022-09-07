@@ -6,7 +6,7 @@ __doc__ = """Enter some text here, bitch"""
 from twitchbot import Command, Message
 
 from common.constants import MODERATOR_PERMISSION
-from common.utilfuncs import get_commands
+from common.utilfuncs import get_commands, shoutout
 
 
 def raid_message(emote: str) -> str:
@@ -60,10 +60,7 @@ async def cmd_poll(msg: Message):
 
 @Command("so", permission=MODERATOR_PERMISSION)
 async def cmd_shoutout(msg: Message, *args):
-    uname = str(args[0]).replace("@", "")
-    await msg.reply(
-        f"Be a good boy and go follow {args[0]} for mommy. They're such a nice kid. https://twitch.tv/{uname}"
-    )
+    await msg.reply(shoutout(args[0]))
 
 
 @Command("specs")
