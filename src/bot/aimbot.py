@@ -1,4 +1,4 @@
-__all__ = []
+__all__ = ["runbot"]
 __author__ = """whege"""
 __date__ = "8/2/2022"
 __doc__ = """Enter some text here, bitch"""
@@ -35,6 +35,10 @@ class MommyTron(BaseBot):
         self.run()
 
 
+def runbot():
+    MommyTron()()
+
+
 if __name__ == '__main__':
     # TODO add handling for when token is expired
-    MommyTron()()
+    runbot()
