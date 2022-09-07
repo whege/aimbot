@@ -5,7 +5,7 @@ __doc__ = """Enter some text here, bitch"""
 
 from twitchbot import Command, Message
 
-from common.constants import ADMIN_PERMISSION
+from common.constants import MODERATOR_PERMISSION
 from common.utilfuncs import get_commands
 
 
@@ -28,7 +28,7 @@ async def cmd_doggos(msg: Message):
     await msg.reply("Teddy: Black Lab Mix; George: Goldendoodle")
 
 
-@Command("fr", permission=ADMIN_PERMISSION)
+@Command("fr", permission=MODERATOR_PERMISSION)
 async def cmd_follower_raid(msg: Message):
     await msg.reply(raid_message("r4d4rlCatDance"))
 
@@ -48,17 +48,17 @@ async def cmd_lurk(msg: Message):
 @Command("peripherals")
 async def cmd_peripherals(msg: Message):
     await msg.reply(
-        "Acer Nitro XF3 | HyperX Alloy Origins Core TKL | HyperX Pulsefire Haste | ROCCAT Elo Air 7.1 | Noblechairs "
-        "EPIC Series "
+        "Acer Nitro XF3 | HyperX Alloy Origins Core TKL | HyperX Pulsefire Haste | HyperX Cloud II Wireless "
+        "| Noblechairs EPIC Series "
     )
 
 
-@Command("poll")
+@Command("poll", permission=MODERATOR_PERMISSION)
 async def cmd_poll(msg: Message):
     await msg.reply("HEY YOU. THERE'S A POLL. GO VOTE YOU BOT")
 
 
-@Command("so", permission=ADMIN_PERMISSION)
+@Command("so", permission=MODERATOR_PERMISSION)
 async def cmd_shoutout(msg: Message, *args):
     uname = str(args[0]).replace("@", "")
     await msg.reply(
@@ -74,7 +74,7 @@ async def cmd_specs(msg: Message):
     )
 
 
-@Command("sr", permission=ADMIN_PERMISSION)
+@Command("sr", permission=MODERATOR_PERMISSION)
 async def cmd_sub_raid(msg: Message):
     await msg.reply(raid_message("r4d4rlRaid"))
 
